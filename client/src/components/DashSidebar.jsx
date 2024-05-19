@@ -7,8 +7,6 @@ import {
   HiAnnotation,
   HiChartPie,
 } from 'react-icons/hi';
-import { BsFillKanbanFill } from "react-icons/bs";
-
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { signoutSuccess } from '../redux/user/userSlice';
@@ -66,15 +64,6 @@ export default function DashSidebar() {
               as='div'
             >
               Profile
-            </Sidebar.Item>
-          </Link>
-          <Link to='/kanban'>
-            <Sidebar.Item
-              active={tab === 'kanban'}
-              icon={BsFillKanbanFill}
-              as='div'
-            >
-              Kanban
             </Sidebar.Item>
           </Link>
           {currentUser.isAdmin && (
